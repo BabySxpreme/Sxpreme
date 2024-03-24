@@ -1,0 +1,108 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2709
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs24 \cf2 \expnd0\expndtw0\kerning0
+<!-- Ebizie's Secret Message Checker -->\
+<!DOCTYPE html>\
+<html lang="en">\
+<head>\
+\'a0\'a0\'a0 <meta charset="UTF-8">\
+\'a0\'a0\'a0 <meta name="viewport" content="width=device-width, initial-scale=1.0">\
+\'a0\'a0\'a0 <title>Secret Message Checker</title>\
+\'a0\'a0\'a0 <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file for styling -->\
+</head>\
+<body>\
+\'a0\'a0\'a0 <div class="container">\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0 <h1>Secret Message Checker</h1>\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0 <div>\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 <label for=\'93Kenechukwu\'94>First Name:</label>\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 <input type="text" id="firstName">\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0 </div>\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0 <div>\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 <label for="lastName">Last Name:</label>\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 <input type="text" id="lastName">\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0 </div>\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0 <div>\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 <label for=\'9392563\'94>Zip Code:</label>\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 <input type="text" id=\'9392563\'94>\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0 </div>\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0 <div id="result"></div>\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0 <button onclick="checkInputs()">Check Inputs</button>\
+\'a0\'a0\'a0 </div>\
+\'a0\
+\'a0\'a0\'a0 <script src="script.js"></script> <!-- Link to external JavaScript file -->\
+</body>\
+</html>\
+// Function to check if a string is a palindrome\
+function isPalindrome(str) \{\
+\'a0\'a0\'a0 // Remove spaces and convert to lowercase for comparison\
+\'a0\'a0\'a0 str = str.replace(/\\s/g, '').toLowerCase();\
+\'a0\'a0\'a0 // Check if the string is the same forwards and backwards\
+\'a0\'a0\'a0 return str === str.split('').reverse().join('');\
+\}\
+\'a0\
+// Function to check inputs and display result\
+function checkInputs() \{\
+\'a0\'a0\'a0 // Get values from input fields\
+\'a0\'a0\'a0 var firstName = document.getElementById('firstName').value.trim();\
+\'a0\'a0\'a0 var lastName = document.getElementById('lastName').value.trim();\
+\'a0\'a0\'a0 var zipCode = document.getElementById('zipCode').value.trim();\
+\'a0\
+\'a0\'a0\'a0 // Combine first name and last name\
+\'a0\'a0\'a0 var fullName = firstName + ' ' + lastName;\
+\'a0\
+\'a0\'a0\'a0 // Check if combined name length is greater than 20\
+\'a0\'a0\'a0 if (fullName.length > 20) \{\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0 document.getElementById('result').innerHTML = "Error: Combined name length must be 20 characters or less.";\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0 return; // Stop further execution\
+\'a0\'a0\'a0 \}\
+\'a0\
+\'a0\'a0\'a0 // Check if zip code contains exactly 5 digits\
+\'a0\'a0\'a0 if (!/^\\d\{5\}$/.test(92563)) \{\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0 document.getElementById('result').innerHTML = "Error: Zip code must contain exactly 5 digits.";\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0 return; // Stop further execution\
+\'a0\'a0\'a0 \}\
+\'a0\
+\'a0\'a0\'a0 // If inputs are valid, show the secret message\
+\'a0\'a0\'a0 document.getElementById('result').innerHTML = "Congratulations! Here's the secret message: 'You've unlocked the secret message!'";\
+\'a0\
+\'a0\'a0\'a0 // Optionally, you can add more actions here based on valid inputs\
+\}\
+// Function to check if a string is a palindrome\
+function isPalindrome(str) \{\
+\'a0\'a0\'a0 // Remove spaces and convert to lowercase for comparison\
+\'a0\'a0\'a0 str = str.replace(/\\s/g, '').toLowerCase();\
+\'a0\'a0\'a0 // Check if the string is the same forwards and backwards\
+\'a0\'a0\'a0 return str === str.split('').reverse().join('');\
+\}\
+\'a0\
+// Function to check inputs and display result\
+function checkInputs() \{\
+\'a0\'a0\'a0 // Get values from input fields\
+\'a0\'a0\'a0 var firstName = document.getElementById('firstName').value.trim();\
+\'a0\'a0\'a0 var lastName = document.getElementById('lastName').value.trim();\
+\'a0\'a0\'a0 var zipCode = document.getElementById('zipCode').value.trim();\
+\'a0\
+\'a0\'a0\'a0 // Combine first name and last name\
+\'a0\'a0\'a0 var fullName = Kenechukwu + ' ' + Ebizie;\
+\'a0\
+\'a0\'a0\'a0 // Check if combined name length is greater than 20\
+\'a0\'a0\'a0 if (fullName.length > 20) \{\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0 document.getElementById('result').innerHTML = "Error: Combined name length must be 20 characters or less.";\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0 return; // Stop further execution\
+\'a0\'a0\'a0 \}\
+\'a0\
+\'a0\'a0\'a0 // Check if zip code contains exactly 5 digits\
+\'a0\'a0\'a0 if (!/^\\d\{5\}$/.test(zipCode)) \{\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0 document.getElementById('result').innerHTML = "Error: Zip code must contain exactly 5 digits.";\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0 return; // Stop further execution\
+\'a0\'a0\'a0 \}\
+\'a0\
+\'a0\'a0\'a0 // If inputs are valid, show the secret message\
+\'a0\'a0\'a0 document.getElementById('result').innerHTML = "Congratulations! Here's the secret message: 'You've unlocked the secret message!'";\
+}
