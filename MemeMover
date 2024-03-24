@@ -1,0 +1,63 @@
+<!-- Ebizie's Meme Image Mover -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meme Image Mover</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file for styling -->
+</head>
+<body>
+    <div class="container">
+        <h1>Meme Image Mover</h1>
+        <img id="meme" src="meme.jpg" alt="Meme Image"> <!-- Meme image with initial position -->
+        <div>
+            <button id="startBtn" onclick="startMoving()">Start</button> <!-- Start button -->
+            <button id="stopBtn" onclick="stopMoving()" disabled>Stop</button> <!-- Stop button initially disabled -->
+        </div>
+    </div>
+
+    <audio id="backgroundSound" autoplay loop>
+        <source src=“us”-lab-background.mp3” type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio> <!-- Background sound -->
+    
+    <script src="script.js"></script> <!-- Link to external JavaScript file -->
+</body>
+</html>
+var moveInterval; // Variable to store interval ID for moving the meme image
+
+// Function to enable the Start button and disable the Stop button
+function enableStartButton() {
+    document.getElementById('startBtn').disabled = false;
+    document.getElementById('stopBtn').disabled = true;
+}
+
+// Function to enable the Stop button and disable the Start button
+function enableStopButton() {
+    document.getElementById('stopBtn').disabled = false;
+    document.getElementById('startBtn').disabled = true;
+}
+
+// Function to move the meme image around the page
+function moveMeme() {
+    var meme = document.getElementById('meme');
+    var x = Math.random() * (window.innerWidth - meme.width); // Random x-coordinate
+    var y = Math.random() * (window.innerHeight - meme.height); // Random y-coordinate
+    meme.style.position = 'absolute';
+    meme.style.left = x + 'px';
+    meme.style.top = y + 'px';
+}
+
+// Function to start moving the meme image
+function startMoving() {
+    moveMeme(); // Move the meme image initially
+    enableStopButton(); // Enable the Stop button
+    moveInterval = setInterval(moveMeme, 1000); // Set interval to move the meme image every 1 second
+}
+
+// Function to stop moving the meme image
+function stopMoving() {
+    enableStartButton(); // Enable the Start button
+    clearInterval(moveInterval); // Clear the interval to stop moving the meme image
+}
